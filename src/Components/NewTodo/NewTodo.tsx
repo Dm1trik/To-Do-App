@@ -68,6 +68,7 @@ export const NewTodo: React.FC<Props> = ({
             active: todos.every(todo => todo.completed),
           })}
           data-cy="ToggleAllButton"
+          aria-label="Toggle all todos"
           onClick={handleToggleAll}
         />
       )}
@@ -78,6 +79,7 @@ export const NewTodo: React.FC<Props> = ({
           type="text"
           className="todoapp__new-todo"
           placeholder="What needs to be done?"
+          aria-label="New todo title"
           ref={inputRef}
           value={title}
           onChange={event => setTitle(event.target.value)}

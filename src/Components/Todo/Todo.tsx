@@ -76,6 +76,7 @@ export const Todo: React.FC<Props> = ({
           type="checkbox"
           className="todo__status"
           checked={todo.completed}
+          aria-label="Toggle todo status"
           onChange={() => onToggle(todo)}
         />
       </label>
@@ -87,6 +88,7 @@ export const Todo: React.FC<Props> = ({
             type="text"
             className="todo__title-field"
             placeholder="Empty todo will be deleted"
+            aria-label="Edit todo title"
             value={newTitle}
             ref={editTitleInputRef}
             onChange={event => setNewTitle(event.target.value)}
@@ -108,6 +110,7 @@ export const Todo: React.FC<Props> = ({
             type="button"
             className="todo__remove"
             data-cy="TodoDelete"
+            aria-label="Delete todo"
             onClick={() => onDelete(todo.id)}
           >
             ×

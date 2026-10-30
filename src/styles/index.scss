@@ -1,3 +1,8 @@
+@import './variables';
+@import './todoapp';
+@import './todo';
+@import './filter';
+
 iframe {
   display: none;
 }
@@ -10,7 +15,8 @@ body {
 
 .notification {
   transition-property: opacity, min-height;
-  transition-duration: 1s;
+  transition-duration: $effect-duration;
+  transition-timing-function: $effect-easing;
   min-height: 36px;
 }
 
@@ -19,7 +25,3 @@ body {
   opacity: 0;
   pointer-events: none;
 }
-
-@import "./todoapp";
-@import "./todo";
-@import "./filter";
